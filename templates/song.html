@@ -8,7 +8,17 @@
 </div>
 
 <ul>
-  DISPLAY ALL OF THE PLAYLISTS THAT THIS SONG IS A PART OF
+  <h3>Song is in the folowing Playlists</h3>
+  
+  {% for p in song.playlist %}
+  <div class="card">
+    <div class="card-body">
+      <a href="/playlists/{{p.songs.id}}"><b>{{p.songs.name}}</b></a>
+    </div>
+  </div>
+    
+  {% endfor %}
+
 </ul>
 
 {% endblock %}
