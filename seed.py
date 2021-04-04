@@ -1,7 +1,8 @@
 from models import db, connect_db, Playlist, Song, PlaylistSong
 from app import app
 
-
+db.drop_all()
+db.create_all()
 
 s1 = Song(title="I See Fire", artist="EdSheran")
 s2 = Song(title="Give Me Love", artist="EdSheran")
